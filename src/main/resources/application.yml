@@ -27,3 +27,9 @@ logging:
   level:
     org.hibernate.SQL: debug
     org.hibernate.orm.jdbc.bind: trace
+
+
+jwt:
+  access:
+    secret: "9uMDsQmC38C8ImGMeiRC2CDHhP5eUoq3NThQIfiy6zU="
+    expiration: 1h
