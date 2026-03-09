@@ -42,8 +42,12 @@ public class WebSecurityConfig {
                         .requestMatchers("/error").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers("/user/**").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/contents/**").permitAll()  // 조회
-                        .requestMatchers(HttpMethod.POST, "/contents/**").authenticated() // 생성
+                        .requestMatchers(HttpMethod.GET, "/contents/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/contents/**").authenticated()
+
+                        .requestMatchers("/swagger-ui/**").permitAll()
+                        .requestMatchers("/swagger-resources/**").permitAll()
+                        .requestMatchers("/v3/api-docs/**").permitAll()
                         .anyRequest().authenticated()
         )
                 .headers(headers -> headers

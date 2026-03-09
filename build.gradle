@@ -25,18 +25,35 @@ repositories {
 }
 
 dependencies {
+    // Swagger
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.13'
+
     // JWT
     compileOnly group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
     runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
     runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
 
+    // Spring Security
     implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Validation
     implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // H2 Console
     implementation 'org.springframework.boot:spring-boot-h2console'
+
+    // Jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Spring Web
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+
+    // Lombok
     compileOnly 'org.projectlombok:lombok'
+
+    // Spring Devtools
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
